@@ -76,7 +76,7 @@ class MyComplexProperty
         if (is_array($val) && isset($val['DESCRIPTION'])) {
             $text = $val['DESCRIPTION'];
         } elseif (!is_array($val) && !empty($val)) {
-            // Если данные сохранились строкой, а не массивом
+            // если данные сохранились строкой, а не массивом
             $text = $val;
         }
 
@@ -102,12 +102,12 @@ class MyComplexProperty
         $fieldName = $arUserField['FIELD_NAME'];
         $badKey = $fieldName . 'DESCRIPTION';
 
-        // Если в POST есть "склеенный" ключ — это наш случай
+        // если в POST есть "склеенный" ключ
         if (isset($_POST[$badKey]) && $_POST[$badKey] !== 'html' && !empty($_POST[$badKey])) {
             return serialize(['DESCRIPTION' => $_POST[$badKey]]);
         }
 
-        // Резервный вариант, если данные пришли в массиве
+        // резервный вариант, если данные пришли в массиве
         if (is_array($value) && isset($value['DESCRIPTION'])) {
             return serialize($value);
         }

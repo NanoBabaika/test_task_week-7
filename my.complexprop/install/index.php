@@ -13,7 +13,6 @@ class my_complexprop extends CModule
         $this->MODULE_ID = 'my.complexprop';
         $this->MODULE_NAME = 'Тренировочный модуль (7ая неделя)';
         $this->MODULE_DESCRIPTION = 'Задание 7 недели: комплексные свойства.';
-        // Важно: Битрикс может не видеть модуль без версии
         $this->MODULE_VERSION = '1.0.0';
         $this->MODULE_VERSION_DATE = '2026-05-04 22:00:00';
     }
